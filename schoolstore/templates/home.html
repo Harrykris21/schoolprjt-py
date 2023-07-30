@@ -1,0 +1,169 @@
+  <!DOCTYPE html>
+  <html>
+  <head>
+    <title>Bootstrap Index Page</title>
+    <!-- Include Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  </head>
+
+   <style>
+
+.nav-link {
+  font-weight: bold;
+  font-style: normal; /* or italic if you want italics */
+  font-color: white;
+}
+    /* Customize the button styles */
+    .login-button {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #007bff;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 5px;
+      font-size: 16px;
+      border: none;
+    }
+
+    /* On hover, change the background color slightly */
+    .login-button:hover {
+      background-color: #0056b3;
+      cursor: pointer;
+    }
+
+
+            .banner {
+            position: relative;
+            width: 100%;
+            height: 300px; / Change the height as needed /
+            background-color: #f2f2f2;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        .banner img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .banner-content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: #fff;
+            font-size: 24px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Footer styles */
+        footer {
+            background-color: 	#000080;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+        }
+
+        /* Add some space between footer text and social icons */
+        .footer-text {
+            margin-bottom: 10px;
+        }
+
+        /* Social icons styles */
+        .social-icons a {
+            color: #fff;
+            font-size: 24px;
+            margin: 0 5px;
+            text-decoration: none;
+        }
+
+        /* Change social icon colors on hover */
+        .social-icons a:hover {
+            color: #ffcc00; /* Change to the desired hover color */
+        }
+  </style>
+
+
+  <body>
+
+
+    <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #FFCA28;">
+    <a class="navbar-brand" href="#">SchoolStore</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+
+<div style="margin-left: 950px;">
+      <ul class="navbar-nav">
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Departments
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+
+            <a class="dropdown-item" href="https://en.wikipedia.org/wiki/Computer_science" target="_blank">Computer Science</a>
+          <a class="dropdown-item" href="https://en.wikipedia.org/wiki/Commerce" target="_blank">Commerce</a>
+          <a class="dropdown-item" href="https://en.wikipedia.org/wiki/History" target="_blank">History</a>
+          <a class="dropdown-item" href="https://en.wikipedia.org/wiki/Biology" target="_blank">Biology</a>
+          <a class="dropdown-item" href="https://en.wikipedia.org/wiki/Literature" target="_blank">Literature</a>
+
+          </div>
+        </li>
+        <li class="nav-item">
+        <b> <a class="nav-link" href="{% url 'homepage' %}">Home</a></b>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'signup' %}">Register</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'login' %}">Login</a>
+        </li>
+      </ul>
+      </div>
+
+
+
+        </div>
+
+
+
+    </div>
+  </nav>
+
+
+  <div class="banner">
+        <img src="https://myschoolshop.ae/pub/media/wysiwyg/home/home_banner_main2.png" alt="Banner Image">
+        <div class="banner-content">
+<!--            <h1>Welcome to My Website</h1>-->
+<!--            <p>Discover the amazing content we have to offer!</p>-->
+        </div>
+    </div>
+
+
+   <br><br> <a href="{% url 'login' %}" class="login-button">Login</a>
+
+
+        <!-- Footer section -->
+    <footer>
+<!--        <div class="footer-text">Connect with us:</div>-->
+        <div class="social-icons">
+            <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+        </div>
+        <div>&copy; 2023 My Website. All rights reserved.</div>
+    </footer>
+
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+</body>
+</html>
